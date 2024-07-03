@@ -7,6 +7,7 @@ import { Button } from '@eliancodes/brutal-ui';
 import { Card } from '@eliancodes/brutal-ui';
 import SummaryCard from '../components/generic/SummaryCard.astro';
 import BlogSummaryCard from '../components/blog/BlogSummaryCard.astro';
+import PortfolioSummaryCard from '../components/portfolio/PortfolioSummaryCard.astro';
 
 ---
 
@@ -16,20 +17,20 @@ import BlogSummaryCard from '../components/blog/BlogSummaryCard.astro';
       <div class="container mx-auto">
           <div class='row'>
               <ul class='grid md:grid-cols-1 '>
-                  <SummaryCard title='Specialization' , imgAlt='' , imgSrc='' , description='game'>
+                  <PortfolioSummaryCard title='Specialization' , imgAlt='' , imgSrc='' , description='game', blogRef='firstblogpost'>
 
-                  </SummaryCard>
+                  </PortfolioSummaryCard>
               </ul>
           </div>
           <div class='row'>
               <ul class='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
-                  <SummaryCard title='Game Project 3' , imgAlt='' , imgSrc='/assets/grimCover.png' , description='game'>
+                  <PortfolioSummaryCard title='Game Project 3' , imgAlt='' , imgSrc='/assets/grimCover.png' , description='game', blogRef='grim'>
 
-                  </SummaryCard>
+                  </PortfolioSummaryCard>
                   
-                  <SummaryCard title='Game Project 2' , imgAlt='' , imgSrc='' , description='game'>
+                  <PortfolioSummaryCard title='Game Project 2' , imgAlt='' , imgSrc='' , description='game', blogRef='test'>
 
-                  </SummaryCard>
+                  </PortfolioSummaryCard>
               </ul>
           </div>
   </main>

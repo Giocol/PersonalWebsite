@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Pill } from '@eliancodes/brutal-ui';
+import SummaryCard from '../generic/SummaryCard.astro';
+import { Button } from '@eliancodes/brutal-ui';
+
+interface Props {
+  title: string;
+  imgSrc: string;
+  imgAlt: string;
+  description: string;
+  blogRef: string;
+}
+const { title, imgAlt, imgSrc, description, blogRef } = Astro.props;
+
+---
+
+<SummaryCard
+  title={title}
+  imgAlt={imgAlt}
+  imgSrc={imgSrc}
+  description={description}
+>
+  <div class='flex justify-end my-4'>
+    <Button href={`/blog/${blogRef}/`}>Read more! &rarr;</Button>
+  </div>
+
+</SummaryCard>
