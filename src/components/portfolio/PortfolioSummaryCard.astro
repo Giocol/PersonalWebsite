@@ -21,8 +21,10 @@ const { title, imgAlt, imgSrc, description, blogRef } = Astro.props;
   imgSrc={imgSrc}
   description={description}
 >
-  <div class='flex justify-end my-4'>
-    <Button href={`/blog/${blogRef}/`}>Read more! &rarr;</Button>
-  </div>
+  <a href={`/blog/${blogRef}/`}>
+    <span class='flex justify-end my-4', style='display:blockd'>
+        <Button href={`/blog/${blogRef}/`}>Read more! &rarr;</Button>
+    </span>
+  </a>
 
 </SummaryCard>
