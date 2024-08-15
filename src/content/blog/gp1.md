@@ -1,12 +1,12 @@
 ---
-title: Blogpost test
-pubDate: 2023-04-09 22:33
+title: "Portfolio : Amplifish"
+pubDate: 2024-07-28 22:33
 author: "Jo Colomban"
 tags:
-  - Vulkan
-  - Queer
-imgUrl: https://i.imgur.com/iGvihVf.jpg
-description: things! Stuff! Insights!
+  - Portfolio
+  - Unity3D
+imgUrl: "/assets/gp1Cover.png"
+description: "A Unity3D high-octane first person puncher"
 layout: '../../layouts/BlogPost.astro'
 ---
 
