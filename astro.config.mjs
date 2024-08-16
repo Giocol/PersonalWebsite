@@ -40,6 +40,23 @@ export default defineConfig({
   // used to generate images
   site: process.env.VERCEL_ENV === 'production' ? 'https://brutal.elian.codes/' : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}/` : 'https://localhost:3001/',
   trailingSlash: 'ignore',
+  markdown: {
+    shikiConfig: {
+      // Choose from Shiki's built-in themes (or add your own)
+      // https://shiki.style/themes
+      theme: 'dracula',
+      // Disable the default colors
+      // https://shiki.style/guide/dual-themes#without-default-color
+      // (Added in v4.12.0)
+      defaultColor: false,
+      // Add custom languages
+      // Note: Shiki has countless langs built-in, including .astro!
+      // https://shiki.style/languages
+      langs: [csharp],
+      // Enable word wrap to prevent horizontal scrolling
+      wrap: true,
+    },
+  },
   integrations: [
     sitemap(),
     unocss({
