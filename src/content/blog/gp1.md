@@ -10,37 +10,61 @@ description: "A Unity3D high-octane first person puncher"
 layout: '../../layouts/BlogPost.astro'
 ---
 
-## Deorum petiit ignis
+## Overview
 
-Lorem markdownum longo os thyrso telum, continet servat fetus nymphae, *vox
-nocte sedesque*, decimo. Omnia esse, quam sive; conplevit illis indestrictus
-admovit dedit sub quod protectus, impedit non.
+Amplifish is a first person action game developed during the first group project in my Game Programming education at FutureGames Malmö. It was developed over 2.5 weeks with a team of 4 programmers, 6 artists, and 2 designers. I acted as programming lead, helping my teammates get past blockers and designing the game's architecture.
 
-## Iovis late orbem Perseus sunt
+((GIFS HERE))
 
-Aras reperire, sui motis correpti coniunx Onetor amore ferire lacertis, petiit.
-Bis pallor et mecum me, igne patruelibus *tendebam*, vultu sterilique terruerat
-*tempore* medium aera **eadem Mittor**.
+## Feature highlight: powerup system
 
-- Non turba loca dederunt primordia ineamus Dictys
-- Tanti amat mundus sedula
-- Potuissent aetas parili coniuge se lumina breve
-- Tamen ille crepitantibus ulla coeperunt quibus iugulo
-- Pindusque solacia luctataque felix
+One of the game's main mechanics is the ability to consume an enemy and get a powerup based on the type of enemy for a certain amount of time. To implement the feature, I tried to take a very modular approach to guarantee easy expendability, allowing the team to easily implement new powerups if the time allowed it.
+A parent "PowerUp" abstract class implements all the methods the player needs to interface with.
+```csharp
+public abstract class Powerup : MonoBehaviour {
+        [SerializeField] protected Color powerupColor;
+        [SerializeField] protected float timeToLive = 10f;
 
-## Longum minus sic saepe
+        public abstract Powerup Use(GameObject enemyHit);
 
-Genu cupiens quoque: cum dolor: sollicitive cantu, et piae Leuconoe, huius non
-nil tuli Peleusque rauca. Et alvum cuncti Hippodamas meritis nec coniunx ausa,
-pete. Congestaque nisi nullus poena. Tanto cum, curvis vulnera quod optatis,
-trahens conplexa saepe.
+        public abstract void Deactivate();
 
-Hominum quo. Signa germanaeque iuvat at feruntur precantibus corpus praebuerat
-excipit mixtaeque inferior, haec percepit regum: nec nec sit ferenti.
+        public Color GetPowerupColor() {
+            return powerupColor;
+        }
 
-## Geminas namque quod referitur argenteus aderat superstes
+        public float GetTimeToLive() {
+            return timeToLive;
+        }
+    }
+```
+To create a powerup, a programmer can simply extend this class, setting up a few variables and coding its behavior in an override of the `Use` method, like in the `StrenghtPowerup` below
 
-Insistere pugno. Cum morae vigilantibus dulces Cycnus: neque cum sororis.
+```csharp
+public class StrenghtPowerup : Powerup {
+        private DamageTrigger damageDealer;
+        private AudioSource audioSource;
 
-Hac Aestas solet docebo tandem tamquam omnis vitiantur mitte, vatis in animique
-infelix passimque. Superasset onus.
+        private void Awake() {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            /*** code that sets up audio for the powerup use omitted***/
+            powerupColor = new Color(1, 0, 0);
+            damageDealer = gameObject.GetComponent<DamageTrigger>();
+            if(!damageDealer)
+              Debug.LogError("Missing DamageDelear component! Make sure to add it to the player prefab");
+        }
+
+        public override Powerup Use(GameObject enemyHit) {
+            audioSource.Play();
+            damageDealer.ToggleIncreasedDamage(true);
+            return null;
+        }
+
+        public override void Deactivate() {
+            audioSource.Stop();
+            damageDealer.ToggleIncreasedDamage(false);
+            Destroy(this);
+        }
+    }
+```
+With the code structured in this way, the Player just needs to have a reference to the current powerup, and polymorphically call the correct `Use` method on it on player input.
