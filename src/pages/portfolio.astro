@@ -2,41 +2,66 @@
 import Layout from '../layouts/Default.astro';
 import MobileSocials from '../components/home/MobileSocials.astro';
 import PortfolioSummaryCard from '../components/portfolio/PortfolioSummaryCard.astro';
-
 ---
 
-<Layout title='Portfolio' pageTitle='Jo Colomban | Porfolio' description=''>
-  <main class='bg-pink p-6'>
-      <MobileSocials />
-      <div class="container mx-auto">
-          <div class='row position-relative top-0 lg:start-100 translate-middle mb-10'>
-              <ul class='grid md:grid-cols-2'>
-                  <PortfolioSummaryCard title='Specialization' , imgAlt='' , imgSrc='/assets/specCover.png' , description='game', blogRef='specialization'>
-
-                  </PortfolioSummaryCard>
-              </ul>
-          </div>
-          <div class='row'>
-              <ul class='grid md:grid-cols-2 lg:grid-cols-2 sm:grid-rows gap-8 mb-6'>
-                  <PortfolioSummaryCard title='Grim - UE5 survival horror' , imgAlt='' , imgSrc='/assets/grimCover.png' , description='', blogRef='gp3'>
-
-                  </PortfolioSummaryCard>
-                  
-                  <PortfolioSummaryCard title='Down the Hill - Unity on Android soapbox racing' , imgAlt='' , imgSrc='/assets/gp2Cover.png'' , description='', blogRef='gp2'>
-
-                  </PortfolioSummaryCard>
-              </ul>
-          </div>
-          <div class='row'>
-            <ul class='grid md:grid-cols-2 lg:grid-cols-2 sm:grid-rows gap-8 mb-6'>
-                <PortfolioSummaryCard title='Amplifish - First Person Puncher' , imgAlt='' , imgSrc='/assets/gp1Cover.png'.png' , description='', blogRef='gp1'>
-
-                </PortfolioSummaryCard>
-
-                <PortfolioSummaryCard title='Placeholder' , imgAlt='' , imgSrc='/assets/landerCover.png'' , description='', blogRef='test'>
-
-                </PortfolioSummaryCard>
+<Layout title="Portfolio" pageTitle="Jo Colomban | Portfolio" description="">
+  <main class="bg-pink p-6">
+    <MobileSocials />
+    <div class="container mx-auto">
+        <div class="row">
+            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-6">
+              <PortfolioSummaryCard
+                title="Specialization"
+                imgAlt=""
+                imgSrc=""
+                description=""
+                blogRef="gp3"
+              />
+              <PortfolioSummaryCard
+                title="Specialization"
+                imgAlt=""
+                imgSrc=""
+                description=""
+                blogRef="gp3"
+              />
             </ul>
-        </div>
+    </div>
+      <div class="row">
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-6">
+          <PortfolioSummaryCard
+            title="Grim - UE5 survival horror"
+            imgAlt=""
+            imgSrc="/assets/grimCover.png"
+            description=""
+            blogRef="gp3"
+          />
+          <PortfolioSummaryCard
+            title="Down the Hill - Unity on Android soapbox racing"
+            imgAlt=""
+            imgSrc="/assets/gp2Cover.png"
+            description=""
+            blogRef="gp2"
+          />
+        </ul>
+      </div>
+      <div class="row">
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-6">
+          <PortfolioSummaryCard
+            title="Amplifish - First Person Puncher"
+            imgAlt=""
+            imgSrc="/assets/gp1Cover.png"
+            description=""
+            blogRef="gp1"
+          />
+          <PortfolioSummaryCard
+            title="Placeholder"
+            imgAlt=""
+            imgSrc="/assets/landerCover.png"
+            description=""
+            blogRef="test"
+          />
+        </ul>
+      </div>
+    </div>
   </main>
 </Layout>

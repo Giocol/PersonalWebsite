@@ -9,21 +9,26 @@ const { headings } = Astro.props;
 <aside>
   <nav class='hidden lg:block sticky top-6'>
     <ul>
-      {
-        headings.map((heading: any) => (
-          <li class='py-1'>
-            {[...Array(heading.depth - 1)].map((_, i) => (
-              <span class='inline-block w-4' />
-            ))}
-            <a
-              class='hover:text-stone transition-all duration-150 ease-in-out text-dark poppins'
-              href={`#${heading.slug}`}
-            >
-              <b>{heading.text}</b>
-            </a>
-          </li>
-        ))
-      }
+      {headings.map((heading: any) => (
+        <li class='py-4 flex flex-col items-start'>
+          <a
+            class='hover:text-stone transition-all duration-150 ease-in-out text-dark poppins'
+            href={`#${heading.slug}`}
+          >
+            <b>{heading.text}</b>
+          </a>
+
+          {heading.imageUrl && (
+            <div class='w-40 h-40 rounded-lg overflow-hidden mt-2'>
+              <img
+                src={heading.imageUrl}
+                alt={heading.text}
+                class='w-full h-full object-cover'
+              />
+            </div>
+          )}
+        </li>
+      ))}
     </ul>
   </nav>
 </aside>

@@ -1,4 +1,6 @@
 ---
+import fs from 'fs';
+import path from 'path';
 import Layout from './Default.astro';
 import BlogSideBar from '../components/blog/BlogSideBar.astro';
 import BlogContent from '../components/blog/BlogContent.astro';
@@ -6,13 +8,59 @@ import RecentBlogPosts from '../components/generic/RecentBlogPosts.astro';
 
 const ogImage = new URL(`/v1/generate/og/${Astro.params.slug}.svg`, Astro.url);
 
-const { content, headings } = Astro.props;
-const { title, description } = content;
+const { content } = Astro.props;
+const { title, description, file } = content;
+
+// Function to extract headings and images directly from markdown
+const extractHeadingsWithImages = (markdown: string) => {
+  const headingRegex = /^(#{1,6})\s+(.*?)$/gm;  // Look for headings first (simple)
+  const imageRegex = /!\[.*\]\((.*?)\)/g;  // Match image syntax
+
+  let headingsWithImages = [];
+  let headingMatch;
+  
+  // Log the markdown content to ensure it's being read
+  console.log('Markdown Content:', markdown);
+
+  while ((headingMatch = headingRegex.exec(markdown)) !== null) {
+    const [fullMatch, hashes, headingText] = headingMatch;
+    const depth = hashes.length;
+    const slug = headingText.toLowerCase().replace(/\s+/g, '-');
+
+    // Log each heading match
+    console.log('Heading Found:', headingText);
+
+    // Now try to find an image below the heading
+    const bodyBelowHeading = markdown.slice(headingMatch.index);
+
+    const imageMatch = imageRegex.exec(bodyBelowHeading);
+    const imageUrl = imageMatch ? imageMatch[1] : null;
+
+    // Add the heading with image URL (if found)
+    headingsWithImages.push({
+      text: headingText,
+      slug: slug,
+      depth: depth,
+      imageUrl: imageUrl,
+    });
+  }
+
+  return headingsWithImages;
+};
+
+// Read the markdown file content
+let markdownContent = '';
+if (file) {
+  markdownContent = fs.readFileSync(path.resolve(file), 'utf-8');
+}
+
+// Extract headings with images from the raw markdown
+const headingsWithImages = extractHeadingsWithImages(markdownContent);
 ---
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <main class='p-6 lg:grid lg:grid-cols-3 flex justify-center'>
-    <BlogSideBar headings={headings} />
+    <BlogSideBar headings={headingsWithImages} />
     <BlogContent content={content}>
       <slot />
     </BlogContent>
