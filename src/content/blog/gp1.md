@@ -11,10 +11,9 @@ layout: '../../layouts/BlogPost.astro'
 ---
 
 ## Overview
-
+![Gif of main gameplay loop](/assets/gp1_mainLoop.GIF)
 Amplifish is a first person action game developed during the first group project in my Game Programming education at FutureGames Malmö. It was developed over 2.5 weeks with a team of 4 programmers, 6 artists, and 2 designers. I acted as programming lead, helping my teammates get past blockers and designing the game's architecture.
 
-((GIFS HERE))
 
 ## Feature highlight: powerup system
 
