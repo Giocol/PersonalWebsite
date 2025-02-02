@@ -5,13 +5,14 @@ author: "Jo Colomban"
 tags:
   - Portfolio
   - UE5
-imgUrl: "/assets/portfolio-ai/signalPriority.gif"
+  - AI
+imgUrl: "/assets/portfolio-ai/aiCover.gif"
 description: "An Unreal Engine 5 fuzzy-brain-driven AI"
 layout: '../../layouts/BlogPost.astro'
 ---
 
 ## Introduction
-<img src='/assets/portfolio-ai/signalPriority.gif' class='w-80% self-align-center'> </img>
+<img src='/assets/portfolio-ai/aiCover.gif' class='w-80% self-align-center'> </img>
 
 This project was born as an improvement on the AI [David Mikulic](https://davidmikulic.com/) and I made during our last [game project]() during our education at FutureGames, with the goal of creating an AI system for a stealth game that can remember more than one thing, and act on those memories according to what's most important at the moment, trying to make it seem smarter than the average NPC guard :\).
 
@@ -169,8 +170,7 @@ The AI, when the brain doesn't provide any signals interesting enough to investi
 
 <hr>
 
-## Credits
+## Credits and Links
 Special thanks to [David Mikulic](https://davidmikulic.com/entomon) for the procedurally animated spider the AI is driving, and [Rae Zeviar](https://www.artstation.com/artwork/2BlOVB) for the amazing victorian mansion modular kit I used for the first clip on this page! Check their portfolios out :\)
 
-
-
+Take a peek at the code on the [GitHub repo](https://github.com/Giocol/ProjectSwordfish) :) 
