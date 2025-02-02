@@ -2,30 +2,60 @@
 import Layout from '../layouts/Default.astro';
 import MobileSocials from '../components/home/MobileSocials.astro';
 import PortfolioSummaryCard from '../components/portfolio/PortfolioSummaryCard.astro';
+import { Card } from '@eliancodes/brutal-ui';
 ---
 
 <Layout title="Portfolio" pageTitle="Jo Colomban | Portfolio" description="">
   <main class="bg-pink p-6">
     <MobileSocials />
     <div class="container mx-auto">
-        <div class="row">
+        <div class="row mt-8">
             <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-6">
+              <Card>
+                <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
+                  Who am I?
+                </h2>
+                <div class='poppins flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 text-justify'>
+                  <div class="w-full md:w-1/2">
+                    <img src="/assets/profilePic.jpg" alt="profile pic" 
+                      class='w-full h-auto rounded object-cover'>
+                  </div>
+                  <div class="w-full md:w-1/2 text-center md:text-left">
+                    <b>Hi, I'm Jo,</b> and I want to make videogames for a living. :)<br>
+                    I'm a <b>gameplay programmer</b>, with a focus on <b>3C</b> and <b>systems</b>. I come from a software engineering background and that makes always mindful of keeping my code clean and efficient!
+                    I thrive in small, collaborative teams, where team-work takes the forefront of every working day!
+                    <br> <br>
+                    Check out a few of my <b>projects</b> in the cards on this page, and <a href='mailto:gcolomban@gmail.com'><b>send me an email</b></a> if you wanna talk about them :)
+                  </div>
+                </div>
+              </Card>
               <PortfolioSummaryCard
-                title="Specialization"
+                title="Specialization - UE5 Fuzzy Brain-driven AI"
                 imgAlt=""
-                imgSrc=""
-                description=""
-                blogRef="gp3"
-              />
-              <PortfolioSummaryCard
-                title="Specialization"
-                imgAlt=""
-                imgSrc=""
+                imgSrc="/assets/portfolio-ai/signalPriority.gif"
                 description=""
                 blogRef="gp3"
               />
             </ul>
     </div>
+    <div class="row">
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-6">
+        <PortfolioSummaryCard
+          title="Specialization - UE5 Third Person Camera"
+          imgAlt=""
+          imgSrc=""
+          description=""
+          blogRef="portfolio-camera"
+        />
+        <PortfolioSummaryCard
+          title="Specialization - UE5 Fishing Minigame"
+          imgAlt=""
+          imgSrc=""
+          description=""
+          blogRef="portfolio-fishing"
+        />
+      </ul>
+</div>
       <div class="row">
         <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-6">
           <PortfolioSummaryCard
@@ -36,32 +66,33 @@ import PortfolioSummaryCard from '../components/portfolio/PortfolioSummaryCard.a
             blogRef="gp3"
           />
           <PortfolioSummaryCard
-            title="Down the Hill - Unity on Android soapbox racing"
+            title="Menagerie - UE5 stealth game"
             imgAlt=""
-            imgSrc="/assets/gp2Cover.png"
+            imgSrc="/assets/gp4Cover.png"
             description=""
-            blogRef="gp2"
+            blogRef="gp4"
           />
         </ul>
       </div>
       <div class="row">
         <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-6">
           <PortfolioSummaryCard
-            title="Amplifish - First Person Puncher"
+            title="Down the Hill - Unity3D Mobile soapbox racing"
+            imgAlt=""
+            imgSrc="/assets/gp2Cover.png"
+            description=""
+            blogRef="gp2"
+          />
+          <PortfolioSummaryCard
+            title="Amplifish - Unity3D First Person Puncher"
             imgAlt=""
             imgSrc="/assets/gp1Cover.png"
             description=""
             blogRef="gp1"
           />
-          <PortfolioSummaryCard
-            title="Placeholder"
-            imgAlt=""
-            imgSrc="/assets/landerCover.png"
-            description=""
-            blogRef="test"
-          />
         </ul>
       </div>
     </div>
+    
   </main>
 </Layout>

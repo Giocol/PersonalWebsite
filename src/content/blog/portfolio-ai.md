@@ -11,7 +11,8 @@ layout: '../../layouts/BlogPost.astro'
 ---
 
 ## Introduction
-GAMEPLAY VIDEO GOES HERE! <br>
+<img src='/assets/portfolio-ai/signalPriority.gif' class='w-80% self-align-center'> </img>
+
 This project was born as an improvement on the AI [David Mikulic](https://davidmikulic.com/) and I made during our last [game project]() during our education at FutureGames, with the goal of creating an AI system for a stealth game that can remember more than one thing, and act on those memories according to what's most important at the moment, trying to make it seem smarter than the average NPC guard :\).
 
 ## Fuzzy Brain basics

@@ -5,18 +5,22 @@ import MobileSocials from '../components/home/MobileSocials.astro';
 import { Pill } from '@eliancodes/brutal-ui';
 import { Button } from '@eliancodes/brutal-ui';
 import { Card } from '@eliancodes/brutal-ui';
+import PortfolioSummaryCard from '../components/portfolio/PortfolioSummaryCard.astro';
 
 const builtWith = [
   { name: 'C++', url: 'https://astro.build/' },
-  { name: 'Vulkan', url: 'https://uno.antfu.me/' },
   {
     name: 'UnrealEngine5',
     url: 'https://docs.astro.build/en/guides/content-collections/',
   },
+  { name: 'git', url: 'https://uno.antfu.me/' },
+  { name: 'Perforce', url: 'https://uno.antfu.me/' },
+
   { name: 'C#/.NET', url: 'https://vercel.com' },
   { name: 'Unity3D', url: 'https://docs.astro.build/en/guides/rss/' },
   { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
   { name: 'Vue.js', url: 'https://www.typescriptlang.org/' },
+  { name: 'Vulkan', url: 'https://uno.antfu.me/' },
 ];
 ---
 
@@ -36,28 +40,25 @@ const builtWith = [
               Jo Colomban (they/them)
             </p>
             <p class='mt-2 outfit text-l md:text-2xl lg:text-4xl'>
-              Game Programming student and Full-stack software engineer based in Malmö, Sweden
+              <b>Game Programming student with a focus on gameplay and systems</b>, former Full-stack software engineer, based in <b>Malmö, Sweden</b>
             </p>
             <div class="row">
               <Button target={'_self'} href='/portfolio/'>
-                <s>Check out my portfolio!</s> 🚧 &rarr;
+                Check out my portfolio!
               </Button>
-              <Button target={'_self'} href='https://drive.google.com/file/d/1f43u61MnQwHi_UUV51tgFKWN3oalqkL0/view?usp=share_link'>
+              <Button target={'_self'} href='https://drive.google.com/file/d/19KBPhciU34hE343UjjG2bwZxGBkXgQaJ/view?usp=sharing'>
                 Download my resume! &rarr;
               </Button>
               <Button target={'_self'} href='https://battledumpling.itch.io/'>
                 Play my games! &rarr;
               </Button>
-              <Button target={'_self'} href='mailto:contact@jocolomban.com'>
+              <Button target={'_self'} href='mailto:gcolomban@gmail.com'>
                 Send me an email! &rarr;
               </Button>
             </div>
           </div>
         </Card>
         <div class="row mt-9">
-          <Card>
-            Highlights!
-          </Card>
         </div>
       </div>
       <div class='col-span-2'>
@@ -91,16 +92,12 @@ const builtWith = [
             <ul class='flex gap-4 flex-wrap'>
               <p>
                 🕹   Studying Game Programming at <b><a href='https://futuregames.se/'>FutureGames</a></b> <br>
-                🌋    Making a <b><a href='https://github.com/Giocol/picoV'>tiny game engine</a></b> from scratch in Vulkan <br>
-                🦀    Learning <b><a href='https://doc.rust-lang.org/book/'>Rust</a></b>
+                🌋  Finding a a <b>gameplay programming internship</b> :)
               </p>
             </ul>
           </Card>
         </div>
         <div class="row mt-9">
-          <Card>
-            Highlights!
-          </Card>
         </div>
       </div>
       <div class='col-span-3'>
@@ -112,11 +109,9 @@ const builtWith = [
                 <img src="/assets/profilePic.jpg" alt="profile pic" class='img-fluid img-thumbnail rounded object-cover w-45% content-center'>
             <br>
             <b>Hi, I'm Jo,</b> and I want to make videogames for a living. :)<br><br>
-            Ever since I was a small child in Sicily, videogames fascinated me.<br>
-            Coincidentally, I also found a lot of joy in working on small electronics projects for my high school physics class. So when the time came, I decided to move to Milan to pursue an engineering degree in Computer Science. <br><br>
-            I immediately fell in love with the art of <b>low-level optimization,</b> and had a blast working on a project with my team for the Xilinx Open Hardware, a competition hosted by the biggest FPGA manufacturers in the world, managing to get all the way to the finals. As much fun as FPGA optimization is, it finally became clear to me that there was one field within software development that could benefit from my dedication and attention to low-level optimization, while also stimulating that creative part of my brain: game development. Over the years I have had so much experience playing games and making memories through them, and in the process, inadvertently developed an idea of <b>what makes games good.</b>
-            Ever since then, it's been my clear goal of mine to follow a path that would eventually lead to allowing me the possibility to work on <b>a game I could call my own.</b>
-        </div>
+            I'm a <b>gameplay programmer</b>, with a focus on <b>3C</b> and <b>systems</b>. I come from a software engineering background and that makes always mindful of keeping my code clean and efficient!
+            I thrive in small, collaborative teams, where team-work takes the forefront of every working day!
+            <br> <br>        </div>
         </Card>
       </div>
     </section>
