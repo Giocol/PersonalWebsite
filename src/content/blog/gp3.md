@@ -6,7 +6,7 @@ tags:
   - Portfolio
   - Unity3D
 imgUrl: "/assets/grimCover.png"
-description: "A Unreal Engine 5 Survival Horror"
+description: "An Unreal Engine 5 Survival Horror"
 layout: '../../layouts/BlogPost.astro'
 ---
 
