@@ -58,6 +58,15 @@ const headingsWithImages = extractHeadingsWithImages(markdownContent);
       <BlogSideBar headings={headingsWithImages} />
     </div>
     <div class = 'col-span-3'>
+      <a href='/blog/' title='Back to blog'>&larr; Back to blog</a>
+      <p class='text-slate text-sm md:text-base'>
+        Published on {content.pubDate} by {content.author}
+      </p>
+      <br>
+      <header class="mb-6">
+        <h1 class="text-5xl font-bold">{title}</h1>
+        <p class="text-gray-600">{description}</p>
+      </header>
       <BlogContent content={content}>
         <slot />
       </BlogContent>
