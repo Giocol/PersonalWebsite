@@ -38,7 +38,6 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
 </div>
 <img src="/assets/portfolio-ai/signalThresholdBT.png" class="rounded-lg p-4" />
 
-
 <div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-ai/signalPriority.gif" class="rounded-lg" />
@@ -47,6 +46,18 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
         <h3>Signal priority</h3>
         <p class="text-justify">
             The big advantage of this Fuzzy Brain-driven AI is that it can store multiple signals in memory, while always focusing on the one with highest priority. In this example, the AI is storing the noise signals from the distractions the player is throwing past it, but it's still acting on the much **higher weight** vision signal that its getting from detecting the player in its narrow vision cone (see <a href="#sight">sight section below!</a>)
+        </p>
+    </div>
+</div>
+
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+    <div class="w-full lg:w-2/3">
+        <img src="/assets/portfolio-ai/spiderEyes.gif" class="rounded-lg" />
+    </div>
+    <div class="w-full lg:w-1/3">
+        <h3>Using the raw signal weight</h3>
+        <p class="text-justify">
+            While using severity thresholds ideal in most BT-related applications, the float signal weight of the current most interesting signal is available from <i>UFuzzyBrainComponent</i>'s BP API and it can be used, for example, for visual effects like this (very programmer-arty :D) glow on the spider's eyes that increases as the spider receives stronger and stronger signals, in this case from seeing the player. (Movement has been intentionally stopped while recording this GIF for clarity.)
         </p>
     </div>
 </div>
