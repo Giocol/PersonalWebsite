@@ -12,8 +12,8 @@ const { content } = Astro.props;
 const { title, description, file } = content;
 
 const extractHeadingsWithImages = (markdown: string) => {
-  const headingRegex = /^(#{1,6})\s+(.*?)$/gm;  // Look for headings first (simple)
-  const imageRegex = /!\[.*\]\((.*?)\)/g;  // Match image syntax
+  const headingRegex = /^(#{1,6})\s+(.*?)$/gm;  // Match markdown headers
+  const imageRegex = /(?:!\[.*\]\((.*?)\)|<img\s+[^>]*src=["'](.*?)["'][^>]*>)/;  // Match both markdown and HTML img (only once)
 
   let headingsWithImages = [];
   let headingMatch;
@@ -23,11 +23,16 @@ const extractHeadingsWithImages = (markdown: string) => {
     const depth = hashes.length;
     const slug = headingText.toLowerCase().replace(/\s+/g, '-');
 
-    const bodyBelowHeading = markdown.slice(headingMatch.index);
+    // Slice the content immediately below the header (next line)
+    const bodyBelowHeading = markdown.slice(headingMatch.index + fullMatch.length).trim();
+    
+    // Ensure that the next line (after trimming) is an image (using regex to match only the first image on the next line)
+    const nextLine = bodyBelowHeading.split("\n")[0].trim();  // Get the first line after the heading
 
-    const imageMatch = imageRegex.exec(bodyBelowHeading);
-    const imageUrl = imageMatch ? imageMatch[1] : null;
+    const imageMatch = imageRegex.exec(nextLine); // Check if the first line after the heading is an image
+    const imageUrl = imageMatch ? (imageMatch[1] || imageMatch[2]) : null;  // Capture the URL
 
+    // Push the heading and its associated image URL (or null if no image exists)
     headingsWithImages.push({
       text: headingText,
       slug: slug,
@@ -49,7 +54,7 @@ const headingsWithImages = extractHeadingsWithImages(markdownContent);
 
 <Layout title={title} description={description} ogImage={ogImage}>
   <main class='p-6 lg:grid lg:grid-cols-5 flex justify-center'>
-    <div>
+    <div class="overflow-visible h-screen">
       <BlogSideBar headings={headingsWithImages} />
     </div>
     <div class = 'col-span-3'>

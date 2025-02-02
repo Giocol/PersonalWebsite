@@ -6,8 +6,8 @@ interface Props {
 const { headings } = Astro.props;
 ---
 
-<aside>
-  <nav class='hidden lg:block sticky top-6'>
+<aside class='h-screen'>
+  <nav class='hidden lg:block sticky top-6 z-10'>
     <ul>
       {headings.map((heading: any) => (
         <li class='py-4 flex flex-col items-start'>
@@ -19,7 +19,10 @@ const { headings } = Astro.props;
           </a>
 
           {heading.imageUrl && (
-            <div class='w-40 h-40 rounded-lg overflow-hidden mt-2' onclick=`window.location="#${heading.slug}"`}>
+            <div
+              class='w-40 h-40 rounded-lg overflow-hidden mt-2'
+              onClick={`window.location="#${heading.slug}"`}
+            >
               <img
                 src={heading.imageUrl}
                 alt={heading.text}
@@ -32,3 +35,4 @@ const { headings } = Astro.props;
     </ul>
   </nav>
 </aside>
+
