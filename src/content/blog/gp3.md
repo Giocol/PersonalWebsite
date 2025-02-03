@@ -23,7 +23,7 @@ All the code for Grim has been written in **C++**, exposing functionality to the
 <img src="/assets/gp3Sanity.gif" class="hidden" />
 I took care of the game's sanity system: sanity is a resource that depleted as the player stayed in the dark or witnessed disturbing events. I tried to make this system as flexible and designer-facing as possible.
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/gp3Sanity.gif" class="rounded-lg" />
     </div>
@@ -39,7 +39,7 @@ I took care of the game's sanity system: sanity is a resource that depleted as t
 <img src="/assets/gp3Inventory.gif" class="hidden" />
 All the widgets for the inventory systems were made from scratch in C++, while exposing the inventory size and item descriptions to the editor to allow for easy customization without any further code required.
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/gp3Inventory.gif" class="rounded-lg" />
     </div>

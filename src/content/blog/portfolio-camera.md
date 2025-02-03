@@ -12,13 +12,13 @@ layout: '../../layouts/BlogPost.astro'
 ---
 
 ## Introduction
-<img src='/assets/portfolio-camera/cameraCover.gif' class='rounded-lg p-4' ></img>
+<img src='/assets/portfolio-camera/cameraCover.gif' class='rounded-lg' ></img>
 
 This project was inspired by this [GDC talk](https://www.youtube.com/watch?v=C7307qRmlMI) about common 3rd person camera mistakes that made me want to replicate in a handful of days a few of the awesome things that the talk's author, who also happens to be Journey's camera programmer, did with 3C (Camera, Character, Controls) in that game! All the code for it has been written in **C++**, exposing functionality to the editor through custom **DataAssets** and **Blueprint APIs**.
 
 ## FOV and Camera Distance
 <img src="/assets/portfolio-camera/pitch.gif" class="hidden" />
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-camera/pitch.gif" class="rounded-lg" />
     </div>
@@ -31,7 +31,7 @@ This project was inspired by this [GDC talk](https://www.youtube.com/watch?v=C73
 
 ## Camera reset
 <img src="/assets/portfolio-camera/reset.gif" class="hidden" />
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-camera/reset.gif" class="rounded-lg" />
     </div>

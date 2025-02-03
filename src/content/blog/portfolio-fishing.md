@@ -18,12 +18,12 @@ layout: '../../layouts/BlogPost.astro'
 <p class='text-xl'>
 This project aimed to create a in-depth, arcade-y, designer-tweakable first person fishing system for a fishing horror game. All the code for it has been written in **C++**, including the custom UI Widgets, exposing functionality to the editor through custom **DataAssets** and **Blueprint APIs**.
 </p>
-<img src='/assets/portfolio-fishing/fishingCover.gif' class='rounded-lg p-4' ></img>
+<img src='/assets/portfolio-fishing/fishingCover.gif' class='rounded-lg' ></img>
 
 ## Aiming
-<img src='/assets/portfolio-fishing/aiming.gif' class='rounded-lg p-4' ></img>
+<img src='/assets/portfolio-fishing/aiming.gif' class='rounded-lg' ></img>
 The player is required to pick up a spear from the ground and approach the fishing area. That initiates the first part of the fishing process: aiming.
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-fishing/design.png" class="rounded-lg" />
     </div>
@@ -35,7 +35,7 @@ The player is required to pick up a spear from the ground and approach the fishi
     </div>
 </div>
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 ">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-fishing/data.png" class="rounded-lg" />
     </div>
@@ -48,10 +48,10 @@ The player is required to pick up a spear from the ground and approach the fishi
 </div>
 
 ## Reeling
-<img src='/assets/portfolio-fishing/reeling.gif' class='rounded-lg p-4' ></img>
+<img src='/assets/portfolio-fishing/reeling.gif' class='rounded-lg' ></img>
 Once the player throws the spear, the second part of the fishing sequence starts: reeling the fish in. To do so, the player has to keep RMB pressed while solving a series of quick-time events.
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-fishing/qtes.gif" class="rounded-lg" />
     </div>

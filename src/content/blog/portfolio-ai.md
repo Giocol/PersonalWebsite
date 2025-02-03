@@ -30,7 +30,7 @@ Every tick, all signals in memory decay by `PrejudiceDecay`, which is tweakable 
 
 To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's signals, a customizable set of **Signal Severities** has been defined. This allows to read the continuous **weight** of the most interesting signal as a more BT-friendly **discrete** value.
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-ai/severityThresholds.png" class="rounded-lg" />
     </div>
@@ -41,9 +41,9 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
         </p>
     </div>
 </div>
-<img src="/assets/portfolio-ai/signalThresholdBT.png" class="rounded-lg p-4" />
+<img src="/assets/portfolio-ai/signalThresholdBT.png" class="rounded-lg" />
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-ai/signalPriority.gif" class="rounded-lg" />
     </div>
@@ -55,7 +55,7 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
     </div>
 </div>
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-ai/spiderEyes.gif" class="rounded-lg" />
     </div>
@@ -66,7 +66,7 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
         </p>
     </div>
 </div>
-<img src="/assets/portfolio-ai/spiderEyesAPI.png" class="rounded-lg p-4" />
+<img src="/assets/portfolio-ai/spiderEyesAPI.png" class="rounded-lg" />
 
 <hr>
 
@@ -74,7 +74,7 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
 <img src='/assets/portfolio-ai/hearingThrowable.gif' class='hidden'></img>
 *UHearingComponent* is one of the two custom senses made for this project, opting to build a solution from scratch rather than relying on UE's already existing sensing system to guarantee maximum customizability and full integration with the *FuzzyBrain* while keeping the code simple and lightweight.
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-ai/hearingDiagram.png" class="rounded-lg" />
     </div>
@@ -88,12 +88,12 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
     </div>
 </div>
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-1/2 flex flex-col space-y-4">
         <img src="/assets/portfolio-ai/noiseDataAsset.png" class="rounded-lg" />
     </div>
 
-   <div class="w-full lg:w-1/2 flex flex-col space-y-4 p-4">
+   <div class="w-full lg:w-1/2 flex flex-col space-y-4">
         <div>
             <h3>Noise Events</h3>
         <p class="text-justify">
@@ -109,15 +109,15 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
 <hr>
 
 ## Sight
-<img src='/assets/portfolio-ai/sightDemo2.gif' class='rounded-lg p-4' ></img>
+<img src='/assets/portfolio-ai/sightDemo2.gif' class='rounded-lg' ></img>
 *USightComponent* is one of the two custom senses made for this project, opting to build a solution from scratch rather than relying on UE's already existing sensing system to guarantee maximum customizability and full integration with the *FuzzyBrain* while keeping the code simple and lightweight.
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-1/2 flex flex-col space-y-4">
         <img src="/assets/portfolio-ai/sightBP.png" class="rounded-lg" />
     </div>
 
-   <div class="w-full lg:w-1/2 flex flex-col space-y-4 p-4">
+   <div class="w-full lg:w-1/2 flex flex-col space-y-4">
         <div>
         <h3>Sight component setup</h3>
         <p class="text-justify">
@@ -137,7 +137,7 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
 
 The AI, when the brain doesn't provide any signals interesting enough to investigate, will <b>default to a patrolling behavior</b>. To handle it in a <b>designer-friendly</b> way, I implemented a <b>waypoint system that is fully controllable in-editor</b>.
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
         <img src="/assets/portfolio-ai/Waypoints.gif" class="rounded-lg" />
     </div>
@@ -149,7 +149,7 @@ The AI, when the brain doesn't provide any signals interesting enough to investi
     </div>
 </div>
 
-<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
+<div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-1/2 flex flex-col space-y-4">
         <img src="/assets/portfolio-ai/waypointsIngame.gif" class="rounded-lg" />
         <p class="text-justify">
@@ -157,7 +157,7 @@ The AI, when the brain doesn't provide any signals interesting enough to investi
         </p>
     </div>
 
-   <div class="w-full lg:w-1/2 flex flex-col space-y-4 p-4">
+   <div class="w-full lg:w-1/2 flex flex-col space-y-4">
         <div>
             <h3>In-game behavior</h3>
             <p class="text-justify">
