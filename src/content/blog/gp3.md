@@ -11,7 +11,18 @@ layout: '../../layouts/BlogPost.astro'
 ---
 
 ## Overview
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HagPY-kJjfo?si=NfwLl5ReQ57qaZXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="w-full aspect-video">
+  <iframe 
+    class="w-full h-full"
+    src="https://www.youtube.com/embed/HagPY-kJjfo?si=NfwLl5ReQ57qaZXE"
+    frameborder="0" 
+    allow="clipboard-write; encrypted-media; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+
 
 Grim is a first person survival horror game, heavily inspired by **Amnesia The Bunker**, developed during the thrid group project in my Game Programming education at FutureGames Malmö. It was developed over 7 weeks with a team of 4 programmers and 6 artists. I acted as scrum master for the duration of the project, helping my teammates communicate, ensuring that tasks were finished on time and solving blockers for them. 
 I wrote about half of the game's system, including but not limited to the ones hilighted below, and I made most of the sound effects :).
@@ -51,6 +62,6 @@ All the widgets for the inventory systems were made from scratch in C++, while e
     </div>
 </div>
 
-<img src="/assets/gp3ItemData.png" class="rounded-lg" />
+<img src="/assets/gp3ItemData.png" class="rounded-lg pt-4" />
 
 

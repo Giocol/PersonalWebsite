@@ -41,7 +41,7 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
         </p>
     </div>
 </div>
-<img src="/assets/portfolio-ai/signalThresholdBT.png" class="rounded-lg" />
+<img src="/assets/portfolio-ai/signalThresholdBT.png" class="rounded-lg pt-4 pb-4" />
 
 <div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0">
     <div class="w-full lg:w-2/3">
