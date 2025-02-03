@@ -14,7 +14,7 @@ layout: '../../layouts/BlogPost.astro'
 ## Introduction
 <img src='/assets/portfolio-camera/cameraCover.gif' class='rounded-lg p-4' ></img>
 
-This project was inspired by this [GDC talk](https://www.youtube.com/watch?v=C7307qRmlMI) about common 3rd person camera mistakes that made me want to replicate in a handful of days a few of the awesome things that the talk's author, who also happens to be Journey's camera programmer, did with 3C in that game!
+This project was inspired by this [GDC talk](https://www.youtube.com/watch?v=C7307qRmlMI) about common 3rd person camera mistakes that made me want to replicate in a handful of days a few of the awesome things that the talk's author, who also happens to be Journey's camera programmer, did with 3C (Camera, Character, Controls) in that game! All the code for it has been written in **C++**, exposing functionality to the editor through custom **DataAssets** and **Blueprint APIs**.
 
 ## FOV and Camera Distance
 <img src="/assets/portfolio-camera/pitch.gif" class="hidden" />

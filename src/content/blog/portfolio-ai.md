@@ -15,6 +15,7 @@ layout: '../../layouts/BlogPost.astro'
 <img src='/assets/portfolio-ai/aiCover.gif' class='w-80% self-align-center'> </img>
 
 This project was born as an improvement on the AI [David Mikulic](https://davidmikulic.com/) and I made during our last [game project]() during our education at FutureGames, with the goal of creating an AI system for a stealth game that can remember more than one thing, and act on those memories according to what's most important at the moment, trying to make it seem smarter than the average NPC guard :\).
+All the code for it has been written in **C++**, exposing functionality to the editor through custom **DataAssets** and **Blueprint APIs**.
 
 ## Fuzzy Brain basics
 <img src='/assets/portfolio-ai/signalStruct.png' class='w-80% self-align-center'> </img>
@@ -26,6 +27,7 @@ Every tick, all signals in memory decay by `PrejudiceDecay`, which is tweakable 
 
 ## Signal Severity and priority
 <img src="/assets/portfolio-ai/severityThresholds.png" class="hidden" />
+
 To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's signals, a customizable set of **Signal Severities** has been defined. This allows to read the continuous **weight** of the most interesting signal as a more BT-friendly **discrete** value.
 
 <div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-4 lg:space-y-0 p-4">
@@ -60,7 +62,7 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
     <div class="w-full lg:w-1/3">
         <h3>Using the raw signal weight</h3>
         <p class="text-justify">
-            While using severity thresholds ideal in most BT-related applications, the float signal weight of the current most interesting signal is available from <i>UFuzzyBrainComponent</i>'s BP API and it can be used, for example, for visual effects like this (very programmer-arty :D) glow on the spider's eyes that increases as the spider receives stronger and stronger signals, in this case from seeing the player. (Movement has been intentionally stopped while recording this GIF for clarity.)
+            While using severity thresholds ideal in most BT-related applications, the float signal weight of the current most interesting signal is available from <i>UFuzzyBrainComponent</i>'s BP API, <b>defined in C++ code</b>, and it can be used, for example, for visual effects like this (very programmer-arty :D) glow on the spider's eyes that increases as the spider receives stronger and stronger signals, in this case from seeing the player. (Movement has been intentionally stopped while recording this GIF for clarity.)
         </p>
     </div>
 </div>
@@ -80,7 +82,7 @@ To allow a Behavior Tree to drive the AI's behavior based on the Fuzzy Brain's s
         <h3>Code architecture</h3>
         <p class="text-justify">
             I tried to keep <b>noise makers</b> and <b>hearing components</b> as decoupled as possible. The GameMode creates a singleton of <i>UNoiseSystem</i>, and that will be the only thing everything hearing-related will talk to.
-            <li> Things that make noise only have to implement the *INoiseMaker* interface and send a *UNoiseDataAsset* (see below) to *UNoiseSystem* whenever they want to make a noise.
+            <li> Things that make noise only have to implement the <i>INoiseMaker</i> interface and send a <i>UNoiseDataAsset</i> (see below) to <i>UNoiseSystem</i> whenever they want to make a noise.
             <li> Each <i>UHearingComponent</i> will register itself to <i>UNoiseSystem</i> at BeginPlay. <i>UNoiseSystem</i> will then <b>dispatch</b> every <b>noise event</b> to all registered <i>UHearingComponent</i>s <b>in the noise's range</b>
         </p>
     </div>

@@ -12,8 +12,13 @@ layout: '../../layouts/BlogPost.astro'
 ---
 
 ## Introduction
+<img src='/assets/portfolio-fishing/fishingCover.gif' class='hidden' ></img>
+
+
+<p class='text-xl'>
+This project aimed to create a in-depth, arcade-y, designer-tweakable first person fishing system for a fishing horror game. All the code for it has been written in **C++**, including the custom UI Widgets, exposing functionality to the editor through custom **DataAssets** and **Blueprint APIs**.
+</p>
 <img src='/assets/portfolio-fishing/fishingCover.gif' class='rounded-lg p-4' ></img>
-This project aimed to create a in-depth, arcade-y, designer-tweakable first person fishing system for a fishing horror game. 
 
 ## Aiming
 <img src='/assets/portfolio-fishing/aiming.gif' class='rounded-lg p-4' ></img>
