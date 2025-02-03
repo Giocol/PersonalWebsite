@@ -17,8 +17,14 @@ Amplifish is a first person action game developed during the first group project
 
 ## Feature highlight: powerup system
 
+<p style= "display:flex;">
+  <img src="/assets/gp1_mainLoop.GIF" style="width: 50%"><span style= "align-self: flex-end; width: 50%; margin-left:10px">One of the game's main mechanics is the ability to consume an enemy and get a powerup based on the type of enemy for a certain amount of time. To implement the feature, I tried to take a very modular approach to guarantee easy expendability, allowing the team to easily implement new powerups if the time allowed it.
+A parent "PowerUp" abstract class implements all the methods the player needs to interface with.
+    </span>
+</p>
 One of the game's main mechanics is the ability to consume an enemy and get a powerup based on the type of enemy for a certain amount of time. To implement the feature, I tried to take a very modular approach to guarantee easy expendability, allowing the team to easily implement new powerups if the time allowed it.
 A parent "PowerUp" abstract class implements all the methods the player needs to interface with.
+
 ```csharp
 public abstract class Powerup : MonoBehaviour {
         [SerializeField] protected Color powerupColor;
