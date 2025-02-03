@@ -4,7 +4,8 @@ pubDate: 2024-07-28 12:00
 author: "Jo Colomban"
 tags:
   - Portfolio
-  - Unity3D
+  - UE5
+  - 3C
 imgUrl: "/assets/grimCover.png"
 description: "An Unreal Engine 5 Survival Horror"
 layout: '../../layouts/BlogPost.astro'
@@ -24,8 +25,8 @@ layout: '../../layouts/BlogPost.astro'
 
 
 
-Grim is a first person survival horror game, heavily inspired by **Amnesia The Bunker**, developed during the thrid group project in my Game Programming education at FutureGames Malmö. It was developed over 7 weeks with a team of 4 programmers and 6 artists. I acted as scrum master for the duration of the project, helping my teammates communicate, ensuring that tasks were finished on time and solving blockers for them. 
-I wrote about half of the game's system, including but not limited to the ones hilighted below, and I made most of the sound effects :).
+Grim is a first person survival horror game, heavily inspired by **Amnesia The Bunker**, developed during the third group project in my Game Programming education at FutureGames Malmö. It was developed over 7 weeks with a team of 4 programmers and 6 artists. I acted as scrum master for the duration of the project, helping my teammates communicate, ensuring that tasks were finished on time and solving blockers for them. 
+I wrote about half of the game's system, including but not limited to the ones highlighted below, and I made most of the sound effects :).
 
 All the code for Grim has been written in **C++**, exposing functionality to the editor through custom **DataAssets**.
 
@@ -41,7 +42,7 @@ I took care of the game's sanity system: sanity is a resource that depleted as t
     <div class="w-full lg:w-1/3">
         <h3>Sanity Event Data Asset</h3>
         <p class="text-justify">
-           This is an example of a <b>Sanity Event Data Asset</b>, that a desginer can define a sanity even with. It allows a simple way to select a <b>series of conditions</b> for said event to trigger, including the possibility to make the event re-trigger after a cooldown, and various randomizations to keep it varied, without needing to write <b>any extra code</b>.
+           This is an example of a <b>Sanity Event Data Asset</b>, that a designer can define a sanity even with. It allows a simple way to select a <b>series of conditions</b> for said event to trigger, including the possibility to make the event re-trigger after a cooldown, and various randomization to keep it varied, without needing to write <b>any extra code</b>.
         </p>
     </div>
 </div>
@@ -64,4 +65,5 @@ All the widgets for the inventory systems were made from scratch in C++, while e
 
 <img src="/assets/gp3ItemData.png" class="rounded-lg pt-4" />
 
-
+## Links
+You can check out the game on [itch.io](https://futuregames.itch.io/menagerie) :) 
