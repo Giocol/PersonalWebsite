@@ -2,7 +2,7 @@
 import Layout from '../layouts/Default.astro';
 import MobileSocials from '../components/home/MobileSocials.astro';
 import PortfolioSummaryCard from '../components/portfolio/PortfolioSummaryCard.astro';
-import { Card } from '@eliancodes/brutal-ui';
+import { Button, Card } from '@eliancodes/brutal-ui';
 ---
 
 <Layout title="Portfolio" pageTitle="Jo Colomban | Portfolio" description="">
@@ -15,25 +15,35 @@ import { Card } from '@eliancodes/brutal-ui';
                 <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
                   Who am I?
                 </h2>
-                <div class='poppins flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 text-justify'>
-                  <div class="w-full md:w-1/2">
-                    <img src="/assets/profilePic.jpg" alt="profile pic" 
-                      class='w-full h-auto rounded object-cover'>
+                <div class='poppins '>
+                  <div class='flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 text-justify'>
+                    <div class="w-full md:w-1/2">
+                      <img src="/assets/profilePic.jpg" alt="profile pic" 
+                        class='w-full h-auto rounded object-cover'>
+                    </div>
+                    <div class="w-full md:w-1/2 text-center md:text-left">
+                      <b>Hi, I'm Jo,</b> and I want to make videogames for a living. :)<br>
+                      I'm a <b>gameplay programmer</b>, with a focus on <b>3C</b> (Camera, Character, Controls) and <b>systems</b>. I come from a software engineering background and that makes always mindful of keeping my code clean and efficient!
+                      I thrive in small, collaborative teams, where team-work takes the forefront of every working day!
+                      <br> <br>
+                      Check out a few of my <b>projects</b> in the cards on this page, and <a href='mailto:gcolomban@gmail.com'><b>send me an email</b></a> if you wanna talk about them :)
+                      <br>
+                      <br>
+                      <Button target={'_self'} href='https://drive.google.com/file/d/19KBPhciU34hE343UjjG2bwZxGBkXgQaJ/view?usp=sharing'>
+                        Download my resume! &rarr;
+                      </Button>
+                    </div>
+                    
+  
                   </div>
-                  <div class="w-full md:w-1/2 text-center md:text-left">
-                    <b>Hi, I'm Jo,</b> and I want to make videogames for a living. :)<br>
-                    I'm a <b>gameplay programmer</b>, with a focus on <b>3C</b> (Camera, Character, Controls) and <b>systems</b>. I come from a software engineering background and that makes always mindful of keeping my code clean and efficient!
-                    I thrive in small, collaborative teams, where team-work takes the forefront of every working day!
-                    <br> <br>
-                    Check out a few of my <b>projects</b> in the cards on this page, and <a href='mailto:gcolomban@gmail.com'><b>send me an email</b></a> if you wanna talk about them :)
-                  </div>
+                  
                 </div>
               </Card>
               <PortfolioSummaryCard
                 title="Specialization - UE5 Fuzzy Brain-driven AI"
                 imgAlt=""
                 imgSrc="/assets/portfolio-ai/aiCover.gif"
-                description="An AI system for a stealth game that can remember more than one thing, and act on those memories according to what's most important at the moment, trying to make it seem smarter than the average NPC guard :\)."
+                description="An AI system for a stealth game that can remember more than one thing, and act on those memories according to what's most important at the moment."
                 blogRef="portfolio-ai"
               />
             </ul>
@@ -44,14 +54,14 @@ import { Card } from '@eliancodes/brutal-ui';
           title="Specialization - UE5 Journey-inspired 3rd person camera"
           imgAlt=""
           imgSrc="/assets/portfolio-camera/cameraCover.gif"
-          description="A smooth, cinematic 3rd person camera inspired by Journey's camera."
+          description="A smooth, cinematic 3rd person camera inspired by Journey."
           blogRef="portfolio-camera"
         />
         <PortfolioSummaryCard
           title="Specialization - UE5 1st person fishing system"
           imgAlt=""
           imgSrc="/assets/portfolio-fishing/fishingCover.gif"
-          description="This project aimed to create a in-depth, arcade-y, designer-tweakable first person fishing system for a fishing horror game."
+          description="Customizable first person fishing system."
           blogRef="portfolio-fishing"
         />
       </ul>
