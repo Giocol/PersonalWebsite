@@ -6,7 +6,7 @@ interface Props {
 const { content } = Astro.props;
 ---
 
-<article class='prose-slate md:prose poppins max-w-none'>
+<article class='prose-slate text-justify md:prose poppins max-w-none'>
   <slot />
   <p class='text-slate'>Written by {content.author}</p>
   <a href='/blog/' title='Back to blog'>&larr; Back to blog</a>
