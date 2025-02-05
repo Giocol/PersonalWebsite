@@ -6,7 +6,7 @@ tags:
   - Portfolio
   - UE5
   - AI
-imgUrl: "/assets/grimCover.png"
+imgUrl: "/assets/gp4Cover.png"
 description: "An Unreal Engine 5 Stealth game"
 layout: '../../layouts/BlogPost.astro'
 ---
