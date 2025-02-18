@@ -52,7 +52,7 @@ export default defineConfig({
       // Add custom languages
       // Note: Shiki has countless langs built-in, including .astro!
       // https://shiki.style/languages
-      langs: [],
+      langs: ['cpp'],
       // Enable word wrap to prevent horizontal scrolling
       wrap: true,
     },
